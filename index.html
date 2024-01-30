@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carbon Emissions Calculator</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Carbon Emissions Calculator</h1>
+    <p class="instructions">Please provide us with the following data about your vehicle:</p>
+
+    <form id="emissionsForm">
+        <label for="fuelType">Fuel type (Diesel, Petrol, or CNG): </label>
+        <input type="text" id="fuelType" required>
+
+        <label for="mileage">Average fuel mileage of your car in Km/L: </label>
+        <input type="number" id="mileage" step="0.01" required>
+
+        <label for="kmInput">Do you know how many kilometres your vehicle has driven this year? (If unaware, respond 'No')</label>
+        <input type="text" id="kmInput" required>
+
+        <button type="button" onclick="calculateEmissions()">Calculate Emissions</button>
+    </form>
+
+    <div id="result" class="hidden">
+        <p id="emissionResult"></p>
+    </div>
+
+    <div class="constants">
+        <p>Note: Below are listed the constant values we use to calculate carbon emissions:</p>
+        <ul>
+            <li>Diesel: 2.68 Kg/L</li>
+            <li>Petrol: 2.31 Kg/L</li>
+            <li>CNG: 2.67 Kg/L</li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
